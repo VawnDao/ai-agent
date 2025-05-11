@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instant Avatar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="text-to-speech.html">Text to Speech</a></li>
+        <li><a href="instant-avatar.html" class="active">Instant Avatar</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="header">Instant Avatar</div>
+      <div class="description">
+        Convert avatar and audio to a video using the settings below.
+      </div>
+      <!-- Upload Avatar Section -->
+      <div class="upload-section">
+        <div class="form-group">
+          <label for="avatar-name" class="upload-label">Avatar Name:</label>
+          <input type="text" id="avatar-name" placeholder="Enter avatar name" />
+        </div>
+        <div class="form-group">
+          <label for="avatar-upload" class="upload-label">Upload Avatar:</label>
+          <input type="file" id="avatar-upload" accept="image/*" />
+        </div>
+        <div class="image-preview">
+          <img id="avatar-preview" src="" alt="Avatar Preview" />
+        </div>
+        <button id="register-avatar" class="convert-button">
+          Upload Avatar
+        </button>
+      </div>
+      <!-- Upload Audio Section -->
+      <div class="upload-section">
+        <div class="form-group">
+          <label for="audio-upload" class="upload-label">Upload Audio:</label>
+          <input type="file" id="audio-upload" accept="audio/*" />
+        </div>
+        <button id="register-audio" class="convert-button">
+          Register Audio
+        </button>
+      </div>
+      <!-- Convert Button -->
+      <div class="button-group">
+        <button id="convert" class="convert-button">Convert</button>
+      </div>
+    </div>
+  </body>
+</html>
