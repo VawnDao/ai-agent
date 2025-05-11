@@ -21,14 +21,9 @@
       </div>
       <!-- Upload Avatar Section -->
       <div class="upload-section">
-        <div class="form-group">
-          <label for="avatar-name" class="upload-label">Avatar Name:</label>
-          <input type="text" id="avatar-name" placeholder="Enter avatar name" />
-        </div>
-        <div class="form-group">
-          <label for="avatar-upload" class="upload-label">Upload Avatar:</label>
-          <input type="file" id="avatar-upload" accept="image/*" />
-        </div>
+        <input type="text" id="avatar-name" placeholder="Nhập tên avatar" />
+        <label for="avatar-upload" class="upload-label">Upload Avatar:</label>
+        <input type="file" id="avatar-upload" accept="image/*" />
         <div class="image-preview">
           <img id="avatar-preview" src="" alt="Avatar Preview" />
         </div>
@@ -38,18 +33,21 @@
       </div>
       <!-- Upload Audio Section -->
       <div class="upload-section">
-        <div class="form-group">
-          <label for="audio-upload" class="upload-label">Upload Audio:</label>
-          <input type="file" id="audio-upload" accept="audio/*" />
-        </div>
-        <button id="register-audio" class="convert-button">
-          Register Audio
-        </button>
+        <label for="audio-upload" class="upload-label">Upload Audio:</label>
+        <input type="file" id="audio-upload" accept="audio/*" />
       </div>
+      <!-- Nút đăng ký audio -->
+      <button id="register-audio" class="convert-button">Đăng ký Audio</button>
       <!-- Convert Button -->
-      <div class="button-group">
-        <button id="convert" class="convert-button">Convert</button>
+      <button id="convert" class="convert-button">Convert</button>
+      <button id="check-video-status" class="convert-button">
+        Kiểm tra trạng thái video
+      </button>
+      <!-- Audio Player -->
+      <div class="audio-player">
+        <audio controls></audio>
       </div>
     </div>
+    <script src="avatar.js"></script>
   </body>
 </html>
