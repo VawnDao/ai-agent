@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #1f2d3d;
+  padding-top: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 15px 0;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 12px 20px;
+  display: block;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-list a.active,
+.nav-list a:hover {
+  background-color: #34495e;
+}
+
+/* Main content styles */
+.container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  width: 880px;
+  padding: 40px;
+  margin-left: 260px;
+  align-self: center;
+  overflow-y: auto;
+}
+
+.header {
+  font-size: 30px;
+  font-weight: 600;
+  color: #1f2d3d;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 16px;
+  color: #5d6d7e;
+  margin-bottom: 25px;
+}
+
+textarea,
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 15px;
+  margin-top: 10px;
+  background-color: #fbfbfb;
+}
+
+.convert-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.convert-button:hover {
+  background-color: #2980b9;
+}
+
+/* Upload Section */
+.upload-section {
+  margin-top: 30px;
+}
+
+.upload-label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: #2c3e50;
+}
+
+/* Avatar Preview */
+.image-preview {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #bdc3c7;
+  border-radius: 12px;
+  width: 250px;
+  height: 250px;
+  background-color: #f0f3f5;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Audio Player */
+.audio-player {
+  margin-top: 30px;
+}
+
+.audio-player audio {
+  width: 100%;
+  border-radius: 6px;
+}
