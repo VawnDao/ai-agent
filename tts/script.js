@@ -1,29 +1,22 @@
 // Đặt API key của bạn vào đây
 const apiKey =
-  "MWaQPWJuZxVHDmY6C9vvy-KW7LTwzkabXpATgnQXSguWFYatj4R2O9QM0PFkwGWvUMDhYrJomOKFxwIHz74w0g";
-// Cải tiến getVoiceId
-function getVoiceId(voiceName) {
-  const voiceMap = {
-    khahan: 199464,
-    ankhoi: 199463,
-    aimy: 199462,
-    vandao: 218709,
-  };
-
-  const defaultVoiceId = 199461; // Giá trị mặc định
-  if (!voiceMap[voiceName]) {
-    console.warn(
-      `Voice name "${voiceName}" không hợp lệ. Sử dụng giá trị mặc định.`
-    );
-  }
-  return voiceMap[voiceName] || defaultVoiceId;
-}
+  "lYGX-qsyK0Zg4EbXdjbGhLVahBHrovEK7n8YJ2eAgPX6c-aec9kdnZj86nWdxvG_-BhpdBi00BSindlcR5s7Kw";
 
 // Sự kiện click
 document.getElementById("convert").addEventListener("click", async () => {
   const text = document.getElementById("text").value.trim();
-  const voice = document.getElementById("voice").value.trim();
+  const voice = document.getElementById("voice-id").value.trim();
   const speed = parseFloat(document.getElementById("speed").value.trim());
+
+  if (!voice) {
+    alert("Vui lòng nhập voice ID!");
+    return;
+  }
+
+  if (isNaN(voice)) {
+    alert("Voice ID phải là số!");
+    return;
+  }
 
   if (!text) {
     alert("Vui lòng nhập văn bản!");
@@ -43,7 +36,7 @@ document.getElementById("convert").addEventListener("click", async () => {
         body: JSON.stringify({
           audio_name: "Web Audio Demo",
           text,
-          voice_id: getVoiceId(voice),
+          voice_id: voice,
           speed,
           callback_url:
             "https://webhook.site/019928d9-1798-464b-8445-19393dbe9524",

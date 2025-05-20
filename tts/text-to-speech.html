@@ -7,29 +7,22 @@
     <link rel="stylesheet" href="/tts/tts.css" />
   </head>
   <body>
-    <div class="sidebar">
-      <ul class="nav-list">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/tts/text-to-speech.html">Text to Speech</a></li>
-        <li><a href="/avatar/instant-avatar.html">Instant Avatar</a></li>
-      </ul>
-    </div>
     <div class="container">
       <div class="header">Text-to-Speech</div>
       <div class="description">
         Convert text to speech using the settings below.
       </div>
+      <div class="voice-input-container">
+        <label for="voice-id" class="voice-label">Voice ID</label>
+        <input
+          id="voice-id"
+          type="text"
+          placeholder="Enter voice ID here..."
+          class="voice-input"
+        />
+      </div>
       <textarea id="text" placeholder="Enter text here..."></textarea>
       <div class="settings">
-        <div class="section">
-          <div class="section-title">Voice</div>
-          <select id="voice" class="dropdown">
-            <option value="khahan">Khahan</option>
-            <option value="ankhoi">Ankhoi</option>
-            <option value="aimy">Aimy</option>
-            <option value="vandao">Vandao</option>
-          </select>
-        </div>
         <div class="section">
           <div class="section-title">Speed</div>
           <div class="slider-container">
