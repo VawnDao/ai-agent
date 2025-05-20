@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instant Avatar</title>
+    <link rel="stylesheet" href="/avatar/avatar.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <ul class="nav-list">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/tts/text-to-speech.html">Text to Speech</a></li>
+        <li><a href="/avatar/instant-avatar.html">Instant Avatar</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="header">Instant Avatar</div>
+      <div class="description">
+        Convert avatar and audio to a video using the settings below.
+      </div>
+      <!-- Upload Avatar Section -->
+      <div class="upload-section">
+        <input type="text" id="avatar-name" placeholder="Nhập tên avatar" />
+        <label for="avatar-upload" class="upload-label">Upload Avatar:</label>
+        <input type="file" id="avatar-upload" accept="image/*" />
+        <div class="image-preview">
+          <img id="avatar-preview" src="" alt="Avatar Preview" />
+        </div>
+        <button id="register-avatar" class="convert-button">
+          Upload Avatar
+        </button>
+      </div>
+      <!-- Upload Audio Section -->
+      <div class="upload-section">
+        <label for="audio-upload" class="upload-label">Upload Audio:</label>
+        <input type="file" id="audio-upload" accept="audio/*" />
+      </div>
+      <!-- Nút đăng ký audio -->
+      <button id="register-audio" class="convert-button">Đăng ký Audio</button>
+      <!-- Convert Button -->
+      <button id="convert" class="convert-button">Convert</button>
+      <button id="check-video-status" class="convert-button">
+        Kiểm tra trạng thái video
+      </button>
+      <!-- Audio Player -->
+      <div class="audio-player">
+        <audio controls></audio>
+      </div>
+    </div>
+    <script src="avatar.js"></script>
+  </body>
+</html>
